@@ -1,5 +1,4 @@
 public class DatasetFile implements FactorsProvider {
-
     public DatasetFile(String fileName) {
         this.fileName = fileName;
     }
