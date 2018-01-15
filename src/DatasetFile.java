@@ -5,6 +5,8 @@ public class DatasetFile implements FactorsProvider {
 
     @Override
     public double getFactor() {
+        if (_currentFactorIndex == _factors.length)
+            return -1;
         return _factors[_currentFactorIndex ++];
     }
 
