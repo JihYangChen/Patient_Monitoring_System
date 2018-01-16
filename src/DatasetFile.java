@@ -1,11 +1,12 @@
 public class DatasetFile implements FactorsProvider {
-
     public DatasetFile(String fileName) {
         this.fileName = fileName;
     }
 
     @Override
     public double getFactor() {
+        if (_currentFactorIndex == _factors.length)
+            return -1;
         return _factors[_currentFactorIndex ++];
     }
 
