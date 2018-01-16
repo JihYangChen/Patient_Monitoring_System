@@ -1,24 +1,17 @@
 public abstract class Device {
-    private String _name;
-    private Patient _patient;
-    private double _safeUpperBound;
-    private double _safeLowerBound;
-    private FactorsProvider _factorsProvider;
-    private PatientMonitoringSystem _patientMonitoringSystem;
-
-    public abstract String getCategory();
-
     public Device(String name) {
         this._name = name;
     }
+
+    public abstract String getCategory();
 
     public void onClockEvent(int time) {
         if (isOnPatientPeriod(time)) {
             double measuredFactor = measure();
             if (isFall(measuredFactor))
-                _patientMonitoringSystem.display(String.format("[%d] %s falls", time, _name));
+                _patientMonitoringSystem.displayMessage(String.format("[%d] %s falls", time, _name));
             else if (isSafe(measuredFactor))
-                _patientMonitoringSystem.display(String.format("[%d] %s is in danger! Cause: %s %.1f", time, _patient.getName(), _name, measuredFactor));
+                _patientMonitoringSystem.displayMessage(String.format("[%d] %s is in danger! Cause: %s %.1f", time, _patient.getName(), _name, measuredFactor));
         }
     }
 
@@ -77,4 +70,11 @@ public abstract class Device {
     private boolean isOnPatientPeriod(int time) {
         return (time % _patient.getMonitorPeriod()) == 0.00;
     }
+
+    private String _name;
+    private Patient _patient;
+    private double _safeUpperBound;
+    private double _safeLowerBound;
+    private FactorsProvider _factorsProvider;
+    private PatientMonitoringSystem _patientMonitoringSystem;
 }

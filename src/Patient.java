@@ -1,5 +1,4 @@
 public class Patient {
-
     public Patient(String name, int monitorPeriod) {
         _name = name;
         _monitorPeriod = monitorPeriod;

@@ -3,7 +3,7 @@ public class PatientMonitoringSystem {
         System.out.print("Hello World!");
     }
 
-    public void display(String displayedMessage) {
+    public void displayMessage(String displayedMessage) {
         screen.display(displayedMessage);
     }
 
