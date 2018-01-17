@@ -14,7 +14,7 @@ public class FileSystemSetter extends SystemSetter {
     public void initializeSystem() {
         String line;
         try {
-            FileReader fileReader = new FileReader("sampleInput");
+            FileReader fileReader = new FileReader(_fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             line = bufferedReader.readLine();
