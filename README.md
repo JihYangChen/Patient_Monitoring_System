@@ -11,3 +11,14 @@
 
 + The factors read are to be compared with safe ranges specified for each patient, and readings that exceed the safe ranges are to be reported by alarm messages displayed on screen of the nurses station. An alarm message is also to be displayed if any analog device falls.
 
+## How to run?
+You have to download the JSON jar file and put it in the `src` folder first.
+
+(We assume that `json-20171018.jar` is the .jar file's name)
+
+```
+cd ./src
+javac -classpath .:json-20171018.jar *.java
+java -classpath .:json-20171018.jar Main sampleInput
+```
+
