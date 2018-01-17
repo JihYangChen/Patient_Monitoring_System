@@ -57,7 +57,7 @@ public class FileSystemSetter extends SystemSetter {
             device = new BloodPressureSensor(splitLine[1]);
         else if (splitLine[0].equals("PulseSensor"))
             device = new PulseSensor(splitLine[1]);
-        else if (splitLine[0].equals("PulseSensor"))
+        else if (splitLine[0].equals("TemperatureSensor"))
             device = new TemperatureSensor(splitLine[1]);
 
         device.setFactorsProvider(new DatasetFile(splitLine[2]));

@@ -1,5 +1,8 @@
 3000
 patient Mark 600
-BloodPressureSensor sensor1 BloodPressureData1.dataset 150 200
+BloodPressureSensor BloodPressureSnesor-1 BloodPressureData1.dataset 100 150
+PulseSensor PulseSensor-1 PulseSensor1.dataset 50 60
 patient Tony 500
-BloodPressureSensor sensor2 BloodPressureData1.dataset 130 150
+BloodPressureSensor BP_Snesor2 BloodPressureData2.dataset 120.3 140.5
+PulseSensor PulseSensor-2 PulseSensor2.dataset 55 65
+TemperatureSensor TemperatureSensor-1 TemperatureData1.dataset 32.5 38.8
