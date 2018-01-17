@@ -12,6 +12,7 @@ public abstract class Device {
                 _patientMonitoringSystem.displayMessage(String.format("[%d] %s falls", time, _name));
             else if (isSafe(measuredFactor))
                 _patientMonitoringSystem.displayMessage(String.format("[%d] %s is in danger! Cause: %s %.1f", time, _patient.getName(), _name, measuredFactor));
+            _patientMonitoringSystem.storeMeasureLog(_patient.getName(), _name, time, measuredFactor);
         }
     }
 

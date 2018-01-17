@@ -37,6 +37,7 @@ public class DatabaseFile implements Database {
         }
     }
 
+    @Override
     public String getFormattedDBString() {
         StringBuilder formattedStringBuilder = new StringBuilder();
         for (int i=0; i<patientMeasureLogDB.length(); i++) {
